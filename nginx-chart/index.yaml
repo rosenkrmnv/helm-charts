@@ -3,12 +3,12 @@ entries:
   rosen-nginx-chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-10-23T18:36:52.677416+03:00"
+    created: "2024-10-23T20:32:25.525348+03:00"
     description: A Helm chart for Kubernetes that eventually may deploy Nginx. Eventually.
-    digest: 84b28413021bba9890f8c4599a25fcec986e1c2adbf36233ddf818feb2d84349
+    digest: c5186eb0cf98a54743a8e0ddfd92217ea2463a019f5ad8bcee55f6585ab26627
     name: rosen-nginx-chart
     type: application
     urls:
-    - https://rosenkaramanov.github.io/helm-charts/nginx-chart/rosen-nginx-chart-0.1.0.tgz
+    - https://rosenkrmnv.github.io/rosen-nginx-chart/rosen-nginx-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2024-10-23T18:36:52.676478+03:00"
+generated: "2024-10-23T20:32:25.524088+03:00"
