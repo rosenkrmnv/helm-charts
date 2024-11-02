@@ -13,7 +13,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 8.4.3
-    created: "2024-11-02T09:50:59.427181+02:00"
+    created: "2024-11-02T14:29:45.155987+02:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -39,6 +39,6 @@ entries:
     sources:
     - https://github.com/bitnami/charts/tree/main/bitnami/mysql
     urls:
-    - https://rosenkrmnv.github.io/helm-charts/mysql/mysql-11.1.19.tgz
+    - https://rosenkrmnv.github.io/helm-charts/mysql-chart/mysql-11.1.19.tgz
     version: 11.1.19
-generated: "2024-11-02T09:50:59.424138+02:00"
+generated: "2024-11-02T14:29:45.151484+02:00"
