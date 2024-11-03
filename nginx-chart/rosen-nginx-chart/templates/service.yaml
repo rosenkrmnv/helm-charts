@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: frontend-nginx
+  labels:
+    app: {{ include "rosen-nginx-chart.name" . }}
+    monitoring: enabled
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - name: nginx
+      port: 80
+      targetPort: 80
+    - name: http-metrics
+      port: 9113
+      targetPort: 9113
+  selector:
+    app: {{ include "rosen-nginx-chart.name" . }}

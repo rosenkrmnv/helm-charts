@@ -1,0 +1,62 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "rosen-nginx-chart.fullname" . }}
+  labels:
+    app: rosen-nginx-chart
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: Helm
+    app.kubernetes.io/name: {{ .Chart.Name }}
+    app.kubernetes.io/version: {{ .Chart.Version }}
+    helm.sh/chart: {{ .Chart.Name }}-{{ .Chart.Version }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app: rosen-nginx-chart
+      app.kubernetes.io/instance: {{ .Release.Name }}
+      app.kubernetes.io/managed-by: Helm
+      app.kubernetes.io/name: {{ .Chart.Name }}
+      app.kubernetes.io/version: {{ .Chart.Version }}
+      helm.sh/chart: {{ .Chart.Name }}-{{ .Chart.Version }}
+  template:
+    metadata:
+      labels:
+        app: rosen-nginx-chart
+        app.kubernetes.io/instance: {{ .Release.Name }}
+        app.kubernetes.io/managed-by: Helm
+        app.kubernetes.io/name: {{ .Chart.Name }}
+        app.kubernetes.io/version: {{ .Chart.Version }}
+        helm.sh/chart: {{ .Chart.Name }}-{{ .Chart.Version }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag | default .Chart.AppVersion }}"
+          ports:
+            - containerPort: {{ .Values.service.port }}
+          volumeMounts:
+          - name: nginx-config
+            mountPath: /etc/nginx/nginx.conf
+            subPath: nginx.conf
+          - name: nginx-html-rosenkrmnv
+            mountPath: /usr/share/nginx/html/rosenkrmnv/index.html
+            subPath: index.html
+          - name: nginx-html-example
+            mountPath: /usr/share/nginx/html/example/index.html
+            subPath: index.html
+        - name: nginx-prometheus-exporter
+          image: nginx/nginx-prometheus-exporter:latest
+          args:
+          - -nginx.scrape-uri=http://localhost:80/stub_status
+          ports:
+          - containerPort: 9113   # Prometheus scrapes this port
+      volumes:
+      - name: nginx-config
+        configMap:
+          name: nginx-config
+      - name: nginx-html-rosenkrmnv
+        configMap:
+          name: nginx-html-rosenkrmnv
+      - name: nginx-html-example
+        configMap:
+          name: nginx-html-example

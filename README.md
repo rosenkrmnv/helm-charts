@@ -1,2 +1,5 @@
-# kube-prometheus-stack
-kube-prometheus-stack
+# rosen's helm charts
+
+- nginx
+- mysql
+- kube-prometheus-stack
