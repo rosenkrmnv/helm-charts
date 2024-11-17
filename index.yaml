@@ -3,9 +3,9 @@ entries:
   go-ethereum:
   - apiVersion: v2
     appVersion: "1.0"
-    created: "2024-11-18T00:25:30.622473+02:00"
+    created: "2024-11-18T00:46:50.853516+02:00"
     description: A Helm chart for deploying the Go Ethereum container with contracts
-    digest: 5759ef6d2927cc38683f6d38f0fd779c8b1df0affa216907c2cce26b348da331
+    digest: 30b6b04a88efa61c987b71ccd384b9fa78925c168e63b32d324b7878303110e7
     name: go-ethereum
     type: application
     urls:
@@ -22,7 +22,7 @@ entries:
       artifacthub.io/operator: "true"
     apiVersion: v2
     appVersion: v0.77.1
-    created: "2024-11-18T00:25:30.647159+02:00"
+    created: "2024-11-18T00:46:50.879167+02:00"
     dependencies:
     - condition: crds.enabled
       name: crds
@@ -94,7 +94,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 8.4.3
-    created: "2024-11-18T00:25:30.650773+02:00"
+    created: "2024-11-18T00:46:50.882681+02:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -125,7 +125,7 @@ entries:
   rosen-nginx-chart:
   - apiVersion: v2
     appVersion: 1.16.0
-    created: "2024-11-18T00:25:30.651657+02:00"
+    created: "2024-11-18T00:46:50.883464+02:00"
     description: A Helm chart for Kubernetes that eventually may deploy Nginx. Eventually.
     digest: 26f339bd31b7e88a4bba9d978e927d75369911b962c48c9cf5df982859dc8249
     name: rosen-nginx-chart
@@ -133,4 +133,4 @@ entries:
     urls:
     - https://rosenkrmnv.github.io/helm-charts/nginx-chart/rosen-nginx-chart-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-18T00:25:30.621984+02:00"
+generated: "2024-11-18T00:46:50.852497+02:00"
