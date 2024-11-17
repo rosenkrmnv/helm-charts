@@ -11,4 +11,15 @@ entries:
     urls:
     - https://rosenkrmnv.github.io/helm-charts/go-ethereum-chart/go-ethereum-0.1.0.tgz
     version: 0.1.0
-generated: "2024-11-18T00:46:27.474583+02:00"
+  go-ethereum-deployment:
+  - apiVersion: v2
+    appVersion: "1.0"
+    created: "2024-11-18T00:54:52.141362+02:00"
+    description: A Helm chart for deploying the Go Ethereum container with contracts
+    digest: 1b6f19f7547ac5122ce5475d69a704f1e2d2be550630d6360125f2bdfb3b32ee
+    name: go-ethereum-deployment
+    type: application
+    urls:
+    - https://rosenkrmnv.github.io/helm-charts/go-ethereum-chart/go-ethereum-deployment-0.1.0.tgz
+    version: 0.1.0
+generated: "2024-11-18T00:54:52.140314+02:00"
